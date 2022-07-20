@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="que1">
+        <pre>
+           Que1 ) Difference between “ == “ and “ === “ operators.
+           => 1.Both are comparision aperators.
+            2.The difference between both operators is "==" is use to comapre the value it not compare datatypes.
+            3."===" operator is use to compare both value and datatypes.    
+            for exmaple:
+            var x= "1";
+            var y= [1];
+
+            console.log(x==y); =>It will return true it will check only value.
+            console.log(x===y); =>It will return tFalse it will check both value and datatype.
+
+        </pre>
+    </div>
+   
+
+
+    <div class="que2">
+        <pre>
+            What is the spread operator?
+            => The spread operator is commonly used to make shallow copies of  objects. Using this operator we can enhances its readability of code. 
+            
+            Spread Operaator is use to join all arrays by using "...""  It allow to copy all arraay and create new array with complete  data of all arrays.
+
+            the syntax of spread operator is ("...")
+            for exmaple;
+                     const num1=[1,2,3,4]
+                      const num2=[5,6,7,8]
+                      const combnum = [...num1,...num2]
+                      console.log( combnum)
+                       [1, 2, 3, 4, 5, 6, 7, 8]
+               </pre>
+     </div>
+
+     <div class="que3">
+        <pre>
+            What are the differences between var, let and const?
+            => var is a Global or Functional Scoped.it can be reassigned or redeclared and it can be modified later.
+            =>let is a Block Scoped.it cannot be reassigned or redeclare. let can be modified later.
+            =>const is a Block Scoped.it cannot be reassigned or redeclare.const cannot be modified later.
+            
+        </pre>
+     </div>
+
+
+     <div class="que4">
+        <pre>
+            What is execution context
+            => A special environment to handle the transformation and execution of this JavaScript code. This environment is known as the Execution Context.
+
+            During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.
+                There are two kinds of Execution Context in JavaScript:
+                ●	Global Execution Context (GEC)
+                ●	Function Execution Context (FEC)
+
+        </pre>
+     </div>
+
+
+
+<div class="que5">
+    <pre>
+        What is meant by first class functions.
+        A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+            1.Example 
+
+            const first = function() {
+            console.log("return");
+            }
+            first(); 
+            // return
+
+        
+    </pre>
+</div>
+
+</body>
+</html>
