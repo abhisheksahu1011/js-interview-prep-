@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+ <div class="que1">
+    <pre>
+        What are closures? Give an example of closure
+        =>A closure is the combination of a function bundled together  with references to its surrounding state. In other words, a closure gives you access to an outer function's scope from an inner function
+
+        function outerFunction(){
+            var outerVarialble=100
+
+            function innerFunction(){
+
+                console.log(outerVarialble;
+            }
+            return innerFunction;
+        }
+
+        var innerFun=outerFunction();
+        innerFun();
+
+    </pre>
+ </div>
+
+
+ <div class="que2">
+    <pre>
+        Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()
+        =>call(): The call() method invokes a function with a given this value and arguments provided one by one
+
+        var employe1={
+        
+        
+          name:"Abishek",
+          age:21
+        }
+        var employe2={
+        name:"kumar",
+        age:24
+        
+        
+        
+        }
+        
+        function invite(greeting1,greeting2){
+        
+        console.log(greeting1+" "+this.name+" "+greeting2)
+        
+        }
+        invite.call(employe1,"Hi","How are you")
+        
+          apply:Invokes the function with a given this value and allows you to pass in arguments as an array
+        
+        invite.apply(employe2,["hey dude" ,"how are you "])
+        
+        bind: returns a new function, allowing you to pass any number of arguments
+        
+        var inviteEmploye1=invite.bind(employe1);
+        var inviteEmploye2=invite.bind(employe2);
+        
+        inviteEmploye1("hi","how are you")
+        inviteEmploye2("hey","how are you doing?")
+
+    </pre>
+ </div>
+
+
+<div class="que3">
+   <pre>
+    What is creation phase and execution phase?
+    =>Compiler runs through the entire code for 2 time before actually executing the code,
+    1.	In the first run, It picks all function declarations and stores them in memory with their reference.
+    2.	In the second run, It picks all variables and assign undefined to them. In the event of a conflict between variable and function declaration name then that variable is ignored.
+    
+    Execution Phase
+    1.	Variables assigned with values
+    2.	Functions executed
+    
+   </pre>
+</div>
+
+
+
+<div class="que4">
+    <pre>
+        What are objects in javascript?
+        JavaScript objects are containers for named values called properties
+        car is object which contains properties of type,color & model
+        const car = {type:"Fiat", model:"500", color:"white"};
+    </pre>
+</div>
+
+
+<div class="que5">
+    <pre>
+        What are function constructors?
+        The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar  performance issues as eval() . the Function constructor creates functions which execute in the global scope only.
+
+        Example:
+
+        const sum = new Function('a', 'b', 'return a + b');
+        console.log(sum(2, 6));
+        // output: 8
+
+
+    </pre>
+</div>
+
+    
+    
+<div class="que6">
+    <pre>
+        Explain prototypes
+        => Prototype allows us to use properties
+        and methods on an object even if the properties and methods do not exist on the current object.
+       prototype Object will be created inside the object which refers to the prototype constructor
+       const parentObject={
+       
+       name:"bhishek",
+       age:21,
+       
+       
+       }
+       var childObect=Object.create(parentObject)
+       console.log(parentObject.name);
+       console.log(childObect.name); 
+
+    </pre>
+</div>
+
+<div class="que7">
+    What is prototype chain
+    Prototype chaining is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language.
+
+The prototype on object instance is available through Object.getPrototypeOf(object) or proto property whereas prototype on constructors function is available through Object.prototype.
+
+</div>
+
+
+<div class="que8">
+    Give an example of inheritance using function constructors?
+    function Employee(name, age, gender, id) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.id = id;
+    };
+
+    function Developer(name, age, gender, id, 
+    specialization) {
+
+        // Calling Employee constructor function
+        Employee.call(this, name, age, gender, id);
+
+        // Adding a new parameter
+        this.specialization = specialization;
+    }
+    console.log(Employee.prototype);
+    console.log(Developer.prototype);
+</div>
+
+
+<div class="que9">
+    What are callbacks?
+    A callback function is a function passed into another function as an argument. This function is invoked inside the outer function to complete an action.
+
+        function callbackFunction(name) {
+        console.log('Hello ' + name);
+        }
+
+        function outerFunction(callback) {
+        let name = prompt('Please enter your name.');
+        callback(name);
+        }
+
+        outerFunction(callbackFunction);
+
+
+</div>
+
+
+<div class="que9">
+    What is the use of setTimeout.
+    
+    The setTimeout() is a method inside the window object, it calls the specified function or evaluates a JavaScript expression provided as a string after a given time period for only once. 
+    We all have used alarms or reminders several times, this setTimeout() method also has the same purpose in web applications. We use this to delay some kind of executions. 
+
+    Syntax: setTimeout(function, time);
+
+</div>
+
+<div class="que10">
+    What is an event loop and call stack?
+    The event loop is a constantly running process that monitors both the callback queue and the call stack.
+        If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack. If the callback queue is empty, nothing will happen
+
+
+</div>
+</body>
+</html>
